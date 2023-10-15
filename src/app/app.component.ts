@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Signal, WritableSignal, computed, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 
@@ -11,4 +11,20 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'angular-signals';
+
+  public count: WritableSignal<number> = signal(0);
+  public doubledCount: Signal<number> = computed(() => this.count() * 2);
+  public doubleDoubledCount: Signal<number> = computed(() => this.doubledCount() * 2);
+
+  public increment(): void {
+    this.count.update(count => count + 1);
+  }
+
+  public decrement(): void {
+    this.count.update(count => count - 1);
+  }
+
+  public setTo10(): void {
+    this.count.set(10);
+  }
 }

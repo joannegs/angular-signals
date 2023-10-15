@@ -1,27 +1,37 @@
-# AngularSignals
+# angular-signal
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.0-next.9.
+Este projeto tem como objetivo demonstrar o uso do Signal em aplicações Angular. O Signal é uma abstração de estado reativa e observável que permite o gerenciamento eficiente de dados e ações em um aplicativo Angular.
 
-## Development server
+## Versões do Angular
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Este projeto foi criado usando as seguintes versões do Angular:
 
-## Code scaffolding
+- Angular CLI: 17.0.0-next.9
+- Angular: 17.0.0-next.8
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## O que é o Signal?
 
-## Build
+O Signal é uma abstração de estado reativa e observável que simplifica o gerenciamento de estado em aplicativos Angular. Ele elimina a necessidade de usar serviços, BehaviorSubjects ou Observables complexos para gerenciar o estado de forma reativa.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Conceitos Principais
 
-## Running unit tests
+- **WritableSignal**: Um Signal que pode ser atualizado diretamente usando os métodos `set` ou `update`.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- **Signal**: Um Signal somente leitura que emite valores quando seus valores dependem de outros Signals ou dados externos.
 
-## Running end-to-end tests
+## Métodos Relevantes
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- **`set(value: T): void`**: Define o valor do Signal para um novo valor.
 
-## Further help
+- **`update(callback: (current: T) => T): void`**: Atualiza o valor do Signal usando uma função de callback.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Como Executar o Projeto
+
+Siga estas etapas para executar o projeto em sua máquina:
+
+1. Clone este repositório usando o comando
+2. Navegue até o diretório do projeto
+3. Instale as dependências usando o `npm install`
+4. Inicie o servidor de desenvolvimento com `npm install`
+5. Abra seu navegador e acesse `http://localhost:4200/` para ver o aplicativo em ação.
+
